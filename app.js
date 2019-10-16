@@ -1,47 +1,53 @@
 
 const green = 'rgba(118,174, 170, 1)'
+const greenG = 'rgba(212, 227, 227, 1)'
 const black = 'rgba(23,35, 50, 1)'
+const blackG = 'rgba(14, 32, 50, 1)'
 const brown = 'rgba(205,164, 133, 1)'
+const brownG = 'rgba(230, 207, 189, 1)'
 const greenblue = 'rgba(62,171, 201, 1)'
+const greenblueG = 'rgba(208, 224, 230, 1)'
 const pink = 'rgba(254,156, 161, 1)'
+const pinkG = 'rgba(240, 222, 223, 1)'
 const blue = 'rgba(98,189, 254, 1)'
+const blueG = 'rgba(225, 242, 250, 1)'
 
 const data = [
     {
         topic: 'Food',
         title: 'Wake Up and Smell the Coffee',
         price: '$0.90',
-        color: green
+        color: [green, greenG]
     },
     {
         topic: 'Architecture',
         title: 'The Brand New NASA Office',
         price: '$0.19',
-        color: black
+        color: [black, blackG]
     },
     {
         topic: 'Travel',
         title: 'Experience the Saharan Sands',
         price: '$2.29',
-        color: brown
+        color: [brown, brownG]
     },
     {
         topic: 'Interior',
         title: '9 Air-Cleaning Plants Your Home Needs',
         price: '$0.09',
-        color: greenblue
+        color: [greenblue, greenblueG]
     },
     {
         topic: 'Food',
         title: 'One Month Sugar Detox',
         price: '$0.99',
-        color: pink
+        color: [pink, pinkG]
     },
     {
         topic: 'Photography',
         title: 'Shooting Minimal Instagram Photos',
         price: '$0.29',
-        color: blue
+        color: [blue, blueG]
     }
 ]
 
@@ -52,7 +58,7 @@ function makeTile(colorV,tileV){
     const cardDiv = document.createElement("div");
     cardDiv.setAttribute("class", "card");
     cardDiv.setAttribute("id",tileV);
-    cardDiv.style = "background-color:" + colorV;
+    cardDiv.style = "background-image: linear-gradient(to bottom, " + colorV[0] + "," +colorV[1] + ");";
     cardRow.appendChild(cardDiv);
     return cardDiv;
 }
