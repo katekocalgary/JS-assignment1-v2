@@ -58,7 +58,7 @@ function makeTile(colorV,tileV){
     const cardDiv = document.createElement("div");
     cardDiv.setAttribute("class", "card");
     cardDiv.setAttribute("id",tileV);
-    cardDiv.style = "background-image: linear-gradient(to bottom, " + colorV[0] + "," +colorV[1] + ");";
+    cardDiv.style = "background-image: linear-gradient(to bottom, " + colorV[0] + "," + colorV[1] + ");";
     cardRow.appendChild(cardDiv);
     return cardDiv;
 }
